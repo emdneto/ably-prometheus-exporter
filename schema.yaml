@@ -1,0 +1,928 @@
+metrics:
+- description: Total message count.
+  labels:
+  - applicationId
+  name: messages_all_all_count
+  type: gauge
+- description: Total message size.
+  labels:
+  - applicationId
+  name: messages_all_all_data
+  type: gauge
+- description: 'Total uncompressed message size (excluding any compression, e.g. delta
+    compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas).'
+  labels:
+  - applicationId
+  name: messages_all_all_uncompressedData
+  type: gauge
+- description: Total message count, excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_all_messages_count
+  type: gauge
+- description: Total message size, excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_all_messages_data
+  type: gauge
+- description: 'Total uncompressed message size (excluding any compression, e.g. delta
+    compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas),
+    excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_all_messages_uncompressedData
+  type: gauge
+- description: Total presence message count.
+  labels:
+  - applicationId
+  name: messages_all_presence_count
+  type: gauge
+- description: Total presence message size.
+  labels:
+  - applicationId
+  name: messages_all_presence_data
+  type: gauge
+- description: 'Total uncompressed presence message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas).'
+  labels:
+  - applicationId
+  name: messages_all_presence_uncompressedData
+  type: gauge
+- description: Total inbound realtime message count (received by the Ably service
+    from clients).
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_all_count
+  type: gauge
+- description: Total inbound realtime message size (received by the Ably service from
+    clients).
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_all_data
+  type: gauge
+- description: 'Total uncompressed inbound realtime message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients).'
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_all_uncompressedData
+  type: gauge
+- description: Total inbound realtime message count (received by the Ably service
+    from clients), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_messages_count
+  type: gauge
+- description: Total inbound realtime message size (received by the Ably service from
+    clients), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_messages_data
+  type: gauge
+- description: 'Total uncompressed inbound realtime message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_messages_uncompressedData
+  type: gauge
+- description: Total inbound realtime presence message count (received by the Ably
+    service from clients).
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_presence_count
+  type: gauge
+- description: Total inbound realtime presence message size (received by the Ably
+    service from clients).
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_presence_data
+  type: gauge
+- description: 'Total uncompressed inbound realtime presence message size (excluding
+    any compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients).'
+  labels:
+  - applicationId
+  name: messages_inbound_realtime_presence_uncompressedData
+  type: gauge
+- description: Total inbound REST message count (received by the Ably service from
+    clients).
+  labels:
+  - applicationId
+  name: messages_inbound_rest_all_count
+  type: gauge
+- description: Total inbound REST message size (received by the Ably service from
+    clients).
+  labels:
+  - applicationId
+  name: messages_inbound_rest_all_data
+  type: gauge
+- description: 'Total uncompressed inbound REST message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients).'
+  labels:
+  - applicationId
+  name: messages_inbound_rest_all_uncompressedData
+  type: gauge
+- description: Total inbound REST message count (received by the Ably service from
+    clients), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_inbound_rest_messages_count
+  type: gauge
+- description: Total inbound REST message size (received by the Ably service from
+    clients), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_inbound_rest_messages_data
+  type: gauge
+- description: 'Total uncompressed inbound REST message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_inbound_rest_messages_uncompressedData
+  type: gauge
+- description: Total inbound REST presence message count (received by the Ably service
+    from clients).
+  labels:
+  - applicationId
+  name: messages_inbound_rest_presence_count
+  type: gauge
+- description: Total inbound REST presence message size (received by the Ably service
+    from clients).
+  labels:
+  - applicationId
+  name: messages_inbound_rest_presence_data
+  type: gauge
+- description: 'Total uncompressed inbound REST presence message size (excluding any
+    compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients).'
+  labels:
+  - applicationId
+  name: messages_inbound_rest_presence_uncompressedData
+  type: gauge
+- description: Total inbound message count (received by the Ably service from clients).
+  labels:
+  - applicationId
+  name: messages_inbound_all_all_count
+  type: gauge
+- description: Total inbound message size (received by the Ably service from clients).
+  labels:
+  - applicationId
+  name: messages_inbound_all_all_data
+  type: gauge
+- description: 'Total uncompressed inbound message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients).'
+  labels:
+  - applicationId
+  name: messages_inbound_all_all_uncompressedData
+  type: gauge
+- description: Total inbound message count (received by the Ably service from clients),
+    excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_inbound_all_messages_count
+  type: gauge
+- description: Total inbound message size (received by the Ably service from clients),
+    excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_inbound_all_messages_data
+  type: gauge
+- description: 'Total uncompressed inbound message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_inbound_all_messages_uncompressedData
+  type: gauge
+- description: Total inbound presence message count (received by the Ably service
+    from clients).
+  labels:
+  - applicationId
+  name: messages_inbound_all_presence_count
+  type: gauge
+- description: Total inbound presence message size (received by the Ably service from
+    clients).
+  labels:
+  - applicationId
+  name: messages_inbound_all_presence_data
+  type: gauge
+- description: 'Total uncompressed inbound presence message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    received by the Ably service from clients).'
+  labels:
+  - applicationId
+  name: messages_inbound_all_presence_uncompressedData
+  type: gauge
+- description: Total outbound realtime message count (sent from the Ably service to
+    clients).
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_all_count
+  type: gauge
+- description: Total outbound realtime message size (sent from the Ably service to
+    clients).
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_all_data
+  type: gauge
+- description: 'Total uncompressed outbound realtime message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients).'
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_all_uncompressedData
+  type: gauge
+- description: Total outbound realtime message count (sent from the Ably service to
+    clients), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_messages_count
+  type: gauge
+- description: Total outbound realtime message size (sent from the Ably service to
+    clients), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_messages_data
+  type: gauge
+- description: 'Total uncompressed outbound realtime message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_messages_uncompressedData
+  type: gauge
+- description: Total outbound realtime presence message count (sent from the Ably
+    service to clients).
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_presence_count
+  type: gauge
+- description: Total outbound realtime presence message size (sent from the Ably service
+    to clients).
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_presence_data
+  type: gauge
+- description: 'Total uncompressed outbound realtime presence message size (excluding
+    any compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients).'
+  labels:
+  - applicationId
+  name: messages_outbound_realtime_presence_uncompressedData
+  type: gauge
+- description: Total outbound REST message count (sent from the Ably service to clients).
+  labels:
+  - applicationId
+  name: messages_outbound_rest_all_count
+  type: gauge
+- description: Total outbound REST message size (sent from the Ably service to clients).
+  labels:
+  - applicationId
+  name: messages_outbound_rest_all_data
+  type: gauge
+- description: 'Total uncompressed outbound REST message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients).'
+  labels:
+  - applicationId
+  name: messages_outbound_rest_all_uncompressedData
+  type: gauge
+- description: Total outbound REST message count (sent from the Ably service to clients),
+    excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_rest_messages_count
+  type: gauge
+- description: Total outbound REST message size (sent from the Ably service to clients),
+    excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_rest_messages_data
+  type: gauge
+- description: 'Total uncompressed outbound REST message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_outbound_rest_messages_uncompressedData
+  type: gauge
+- description: Total outbound REST presence message count (sent from the Ably service
+    to clients).
+  labels:
+  - applicationId
+  name: messages_outbound_rest_presence_count
+  type: gauge
+- description: Total outbound REST presence message size (sent from the Ably service
+    to clients).
+  labels:
+  - applicationId
+  name: messages_outbound_rest_presence_data
+  type: gauge
+- description: 'Total uncompressed outbound REST presence message size (excluding
+    any compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients).'
+  labels:
+  - applicationId
+  name: messages_outbound_rest_presence_uncompressedData
+  type: gauge
+- description: Total Webhook message count (sent from the Ably service to clients
+    using Webhooks).
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_all_count
+  type: gauge
+- description: Total Webhook message size (sent from the Ably service to clients using
+    Webhooks).
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_all_data
+  type: gauge
+- description: 'Total uncompressed Webhook message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients using Webhooks).'
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_all_uncompressedData
+  type: gauge
+- description: Total Webhook message count (sent from the Ably service to clients
+    using Webhooks), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_messages_count
+  type: gauge
+- description: Total Webhook message size (sent from the Ably service to clients using
+    Webhooks), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_messages_data
+  type: gauge
+- description: 'Total uncompressed Webhook message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients using Webhooks), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_messages_uncompressedData
+  type: gauge
+- description: Total Webhook presence message count (sent from the Ably service to
+    clients using Webhooks).
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_presence_count
+  type: gauge
+- description: Total Webhook presence message size (sent from the Ably service to
+    clients using Webhooks).
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_presence_data
+  type: gauge
+- description: 'Total uncompressed Webhook presence message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients using Webhooks).'
+  labels:
+  - applicationId
+  name: messages_outbound_webhook_presence_uncompressedData
+  type: gauge
+- description: Total Reactor Queue message count (sent from the Ably service to a
+    Reactor Queue).
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_all_count
+  type: gauge
+- description: Total Reactor Queue message size (sent from the Ably service to a Reactor
+    Queue).
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_all_data
+  type: gauge
+- description: 'Total uncompressed Reactor Queue message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to a Reactor Queue).'
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_all_uncompressedData
+  type: gauge
+- description: Total Reactor Queue message count (sent from the Ably service to a
+    Reactor Queue), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_messages_count
+  type: gauge
+- description: Total Reactor Queue message size (sent from the Ably service to a Reactor
+    Queue), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_messages_data
+  type: gauge
+- description: 'Total uncompressed Reactor Queue message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to a Reactor Queue), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_messages_uncompressedData
+  type: gauge
+- description: Total Reactor Queue presence message count (sent from the Ably service
+    to a Reactor Queue).
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_presence_count
+  type: gauge
+- description: Total Reactor Queue presence message size (sent from the Ably service
+    to a Reactor Queue).
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_presence_data
+  type: gauge
+- description: 'Total uncompressed Reactor Queue presence message size (excluding
+    any compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to a Reactor Queue).'
+  labels:
+  - applicationId
+  name: messages_outbound_sharedQueue_presence_uncompressedData
+  type: gauge
+- description: Total Reactor Firehose message count (sent from the Ably service to
+    some external target using Reactor Firehose).
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_all_count
+  type: gauge
+- description: Total Reactor Firehose message size (sent from the Ably service to
+    some external target using Reactor Firehose).
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_all_data
+  type: gauge
+- description: 'Total uncompressed Reactor Firehose message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to some external target using Reactor Firehose).'
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_all_uncompressedData
+  type: gauge
+- description: Total Reactor Firehose message count (sent from the Ably service to
+    some external target using Reactor Firehose), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_messages_count
+  type: gauge
+- description: Total Reactor Firehose message size (sent from the Ably service to
+    some external target using Reactor Firehose), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_messages_data
+  type: gauge
+- description: 'Total uncompressed Reactor Firehose message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to some external target using Reactor Firehose), excluding
+    presence messages.'
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_messages_uncompressedData
+  type: gauge
+- description: Total Reactor Firehose presence message count (sent from the Ably service
+    to some external target using Reactor Firehose).
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_presence_count
+  type: gauge
+- description: Total Reactor Firehose presence message size (sent from the Ably service
+    to some external target using Reactor Firehose).
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_presence_data
+  type: gauge
+- description: 'Total uncompressed Reactor Firehose presence message size (excluding
+    any compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to some external target using Reactor Firehose).'
+  labels:
+  - applicationId
+  name: messages_outbound_externalQueue_presence_uncompressedData
+  type: gauge
+- description: Total messages sent by a HTTP trigger (typically a serverless function
+    on a service such as AWS Lambda, Google Cloud Functions, or Azure Functions).
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_all_count
+  type: gauge
+- description: Total size of messages sent by a HTTP trigger (typically a serverless
+    function on a service such as AWS Lambda, Google Cloud Functions, or Azure Functions).
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_all_data
+  type: gauge
+- description: 'Total uncompressed size of messages sent by a HTTP trigger (excluding
+    any compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    typically a serverless function on a service such as AWS Lambda, Google Cloud
+    Functions, or Azure Functions).'
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_all_uncompressedData
+  type: gauge
+- description: Total messages sent by a HTTP trigger (typically a serverless function
+    on a service such as AWS Lambda, Google Cloud Functions, or Azure Functions),
+    excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_messages_count
+  type: gauge
+- description: Total size of messages sent by a HTTP trigger (typically a serverless
+    function on a service such as AWS Lambda, Google Cloud Functions, or Azure Functions),
+    excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_messages_data
+  type: gauge
+- description: 'Total uncompressed size of messages sent by a HTTP trigger (excluding
+    any compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    typically a serverless function on a service such as AWS Lambda, Google Cloud
+    Functions, or Azure Functions), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_messages_uncompressedData
+  type: gauge
+- description: Total presence messages sent by a HTTP trigger (typically a serverless
+    function on a service such as AWS Lambda, Google Cloud Functions, or Azure Functions).
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_presence_count
+  type: gauge
+- description: Total size of presence messages sent by a HTTP trigger (typically a
+    serverless function on a service such as AWS Lambda, Google Cloud Functions, or
+    Azure Functions).
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_presence_data
+  type: gauge
+- description: 'Total uncompressed size of presence messages sent by a HTTP trigger
+    (excluding any compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    typically a serverless function on a service such as AWS Lambda, Google Cloud
+    Functions, or Azure Functions).'
+  labels:
+  - applicationId
+  name: messages_outbound_httpEvent_presence_uncompressedData
+  type: gauge
+- description: Total Push message count (pushed to devices via a Push Notifications
+    transport such as FCM or APNS).
+  labels:
+  - applicationId
+  name: messages_outbound_push_all_count
+  type: gauge
+- description: Total Push message size (pushed to devices via a Push Notifications
+    transport such as FCM or APNS).
+  labels:
+  - applicationId
+  name: messages_outbound_push_all_data
+  type: gauge
+- description: 'Total uncompressed Push message size (excluding any compression, e.g.
+    delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    pushed to devices via a Push Notifications transport such as FCM or APNS).'
+  labels:
+  - applicationId
+  name: messages_outbound_push_all_uncompressedData
+  type: gauge
+- description: Total Push message count (pushed to devices via a Push Notifications
+    transport such as FCM or APNS), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_push_messages_count
+  type: gauge
+- description: Total Push message size (pushed to devices via a Push Notifications
+    transport such as FCM or APNS), excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_push_messages_data
+  type: gauge
+- description: 'Total uncompressed Push message size (excluding any compression, e.g.
+    delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    pushed to devices via a Push Notifications transport such as FCM or APNS), excluding
+    presence messages.'
+  labels:
+  - applicationId
+  name: messages_outbound_push_messages_uncompressedData
+  type: gauge
+- description: Total Push presence message count (pushed to devices via a Push Notifications
+    transport such as FCM or APNS).
+  labels:
+  - applicationId
+  name: messages_outbound_push_presence_count
+  type: gauge
+- description: Total Push presence message size (pushed to devices via a Push Notifications
+    transport such as FCM or APNS).
+  labels:
+  - applicationId
+  name: messages_outbound_push_presence_data
+  type: gauge
+- description: 'Total uncompressed Push presence message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    pushed to devices via a Push Notifications transport such as FCM or APNS).'
+  labels:
+  - applicationId
+  name: messages_outbound_push_presence_uncompressedData
+  type: gauge
+- description: Total outbound message count (sent from the Ably service to clients).
+  labels:
+  - applicationId
+  name: messages_outbound_all_all_count
+  type: gauge
+- description: Total outbound message size (sent from the Ably service to clients).
+  labels:
+  - applicationId
+  name: messages_outbound_all_all_data
+  type: gauge
+- description: 'Total uncompressed outbound message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients).'
+  labels:
+  - applicationId
+  name: messages_outbound_all_all_uncompressedData
+  type: gauge
+- description: Total outbound message count (sent from the Ably service to clients),
+    excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_all_messages_count
+  type: gauge
+- description: Total outbound message size (sent from the Ably service to clients),
+    excluding presence messages.
+  labels:
+  - applicationId
+  name: messages_outbound_all_messages_data
+  type: gauge
+- description: 'Total uncompressed outbound message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients), excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_outbound_all_messages_uncompressedData
+  type: gauge
+- description: Total outbound presence message count (sent from the Ably service to
+    clients).
+  labels:
+  - applicationId
+  name: messages_outbound_all_presence_count
+  type: gauge
+- description: Total outbound presence message size (sent from the Ably service to
+    clients).
+  labels:
+  - applicationId
+  name: messages_outbound_all_presence_data
+  type: gauge
+- description: 'Total uncompressed outbound presence message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas,
+    sent from the Ably service to clients).'
+  labels:
+  - applicationId
+  name: messages_outbound_all_presence_uncompressedData
+  type: gauge
+- description: Total persisted message count based on configured channel rules.
+  labels:
+  - applicationId
+  name: messages_persisted_all_count
+  type: gauge
+- description: Total persisted message size based on configured channel rules.
+  labels:
+  - applicationId
+  name: messages_persisted_all_data
+  type: gauge
+- description: 'Total uncompressed persisted message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas)
+    based on configured channel rules.'
+  labels:
+  - applicationId
+  name: messages_persisted_all_uncompressedData
+  type: gauge
+- description: Total persisted message count based on configured channel rules, excluding
+    presence messages.
+  labels:
+  - applicationId
+  name: messages_persisted_messages_count
+  type: gauge
+- description: Total persisted message size based on configured channel rules, excluding
+    presence messages.
+  labels:
+  - applicationId
+  name: messages_persisted_messages_data
+  type: gauge
+- description: 'Total uncompressed persisted message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas)
+    based on configured channel rules, excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_persisted_messages_uncompressedData
+  type: gauge
+- description: Total persisted presence message count based on configured channel
+    rules.
+  labels:
+  - applicationId
+  name: messages_persisted_presence_count
+  type: gauge
+- description: Total persisted presence message size based on configured channel rules.
+  labels:
+  - applicationId
+  name: messages_persisted_presence_data
+  type: gauge
+- description: 'Total uncompressed persisted presence message size (excluding any
+    compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas)
+    based on configured channel rules.'
+  labels:
+  - applicationId
+  name: messages_persisted_presence_uncompressedData
+  type: gauge
+- description: Total processed message count based on configured channel rules.
+  labels:
+  - applicationId
+  name: messages_processed_all_count
+  type: gauge
+- description: Total processed message size based on configured channel rules.
+  labels:
+  - applicationId
+  name: messages_processed_all_data
+  type: gauge
+- description: 'Total uncompressed processed message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas)
+    based on configured channel rules.'
+  labels:
+  - applicationId
+  name: messages_processed_all_uncompressedData
+  type: gauge
+- description: Total processed message count based on configured channel rules, excluding
+    presence messages.
+  labels:
+  - applicationId
+  name: messages_processed_messages_count
+  type: gauge
+- description: Total processed message size based on configured channel rules, excluding
+    presence messages.
+  labels:
+  - applicationId
+  name: messages_processed_messages_data
+  type: gauge
+- description: 'Total uncompressed processed message size (excluding any compression,
+    e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas)
+    based on configured channel rules, excluding presence messages.'
+  labels:
+  - applicationId
+  name: messages_processed_messages_uncompressedData
+  type: gauge
+- description: Total processed presence message count based on configured channel
+    rules.
+  labels:
+  - applicationId
+  name: messages_processed_presence_count
+  type: gauge
+- description: Total processed presence message size based on configured channel rules.
+  labels:
+  - applicationId
+  name: messages_processed_presence_data
+  type: gauge
+- description: 'Total uncompressed processed presence message size (excluding any
+    compression, e.g. delta compression: https://ably.com/docs/realtime/channels/channel-parameters/deltas)
+    based on configured channel rules.'
+  labels:
+  - applicationId
+  name: messages_processed_presence_uncompressedData
+  type: gauge
+- description: Peak connection count.
+  labels:
+  - applicationId
+  name: connections_all_peak
+  type: gauge
+- description: Minimum connection count.
+  labels:
+  - applicationId
+  name: connections_all_min
+  type: gauge
+- description: Mean connection count.
+  labels:
+  - applicationId
+  name: connections_all_mean
+  type: gauge
+- description: Total number of connections opened.
+  labels:
+  - applicationId
+  name: connections_all_opened
+  type: gauge
+- description: Total number of connections refused.
+  labels:
+  - applicationId
+  name: connections_all_refused
+  type: gauge
+- description: Peak active channel count.
+  labels:
+  - applicationId
+  name: channels_peak
+  type: gauge
+- description: Minimum active channel count.
+  labels:
+  - applicationId
+  name: channels_min
+  type: gauge
+- description: Mean active channel count.
+  labels:
+  - applicationId
+  name: channels_mean
+  type: gauge
+- description: Total number of channels opened.
+  labels:
+  - applicationId
+  name: channels_opened
+  type: gauge
+- description: Total number of channel attach requests that failed because of permissions.
+  labels:
+  - applicationId
+  name: channels_refused
+  type: gauge
+- description: Total number of requests made.
+  labels:
+  - applicationId
+  name: apiRequests_all_succeeded
+  type: gauge
+- description: Total number of failed requests.
+  labels:
+  - applicationId
+  name: apiRequests_all_failed
+  type: gauge
+- description: Total number of refused requests (due to account limits).
+  labels:
+  - applicationId
+  name: apiRequests_all_refused
+  type: gauge
+- description: Total number of token requests made.
+  labels:
+  - applicationId
+  name: apiRequests_tokenRequests_succeeded
+  type: gauge
+- description: Total number of failed token requests.
+  labels:
+  - applicationId
+  name: apiRequests_tokenRequests_failed
+  type: gauge
+- description: Total number of refused token requests (due to permissions or rate
+    limiting).
+  labels:
+  - applicationId
+  name: apiRequests_tokenRequests_refused
+  type: gauge
+- description: Total number of Push requests made.
+  labels:
+  - applicationId
+  name: apiRequests_push_succeeded
+  type: gauge
+- description: Total number of failed Push requests.
+  labels:
+  - applicationId
+  name: apiRequests_push_failed
+  type: gauge
+- description: Total number of refused Push requests.
+  labels:
+  - applicationId
+  name: apiRequests_push_refused
+  type: gauge
+- description: Total number of requests made, excluding token and Push requests.
+  labels:
+  - applicationId
+  name: apiRequests_other_succeeded
+  type: gauge
+- description: Total number of failed requests, excluding token and Push requests.
+  labels:
+  - applicationId
+  name: apiRequests_other_failed
+  type: gauge
+- description: Total number of refused requests, excluding token and Push requests.
+  labels:
+  - applicationId
+  name: apiRequests_other_refused
+  type: gauge
+- description: Total number of Push channel messages.
+  labels:
+  - applicationId
+  name: push_channelMessages
+  type: gauge
+- description: Total number of delivered Push notifications.
+  labels:
+  - applicationId
+  name: push_notifications_delivered
+  type: gauge
+- description: Total number of failed Push notifications.
+  labels:
+  - applicationId
+  name: push_notifications_failed
+  type: gauge
+- description: Total number of refused Push notifications.
+  labels:
+  - applicationId
+  name: push_notifications_refused
+  type: gauge
+- description: Total number of Push notifications.
+  labels:
+  - applicationId
+  name: push_notifications_all
+  type: gauge
+- description: Total number of direct publishes.
+  labels:
+  - applicationId
+  name: push_directPublishes
+  type: gauge
